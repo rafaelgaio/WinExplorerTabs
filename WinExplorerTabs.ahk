@@ -1,4 +1,5 @@
 ﻿#Requires AutoHotkey v2.0
+
 #e::
 {
     UniqueID := WinExist("ahk_class CabinetWClass")
@@ -8,5 +9,8 @@
 			}
 		else{
 			Run "explorer"
-		}
+			WinWait "ahk_class CabinetWClass"
+			WinActivate "ahk_class CabinetWClass"
+
+}
 }
